@@ -1,0 +1,85 @@
+{
+  "idSession": 1,
+  "billing": {
+    "firstName": "ghjghjg",
+    "lastName": "ghjghj",
+    "middleName": "fghfgh",
+    "company": "fghfhg",
+    "email": "gfghf",
+    "phone": "fgfgh",
+    "country": {
+      "name": "Aland Islands",
+      "code": "AX"
+    },
+    "city": "fgh",
+    "state": "g",
+    "zip": "g",
+    "address": "g"
+  },
+  "delivery": {
+    "deliveryMethod": {
+      "value": "free",
+      "name": "Free Delivery",
+      "desc": "$0.00 / Delivery in 7 to 14 business Days"
+    }
+  },
+  "payment": {
+    "cardHolderName": "fghfgh",
+    "cardNumber": "gfghfgh",
+    "expiredMonth": "02",
+    "expiredYear": "2019",
+    "cvv": "asfsdafads"
+  },
+  "cart": {
+    "compareList": null,
+    "wishList": null,
+    "products": [
+      {
+        "id": 1,
+        "name": "Keyboard",
+        "images": [
+
+        ],
+        "oldPrice": null,
+        "newPrice": 175,
+        "discount": null,
+        "ratingsCount": 4,
+        "ratingsValue": 350,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue eleifend nulla vel rutrum. Donec tempus metus non erat vehicula, vel hendrerit sem interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+        "availibilityCount": 5,
+        "color": [
+          "#5C6BC0",
+          "#66BB6A",
+          "#90A4AE"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "weight": 150,
+        "categoryId": 2,
+        "cartCount": 1
+      },
+      {
+        "id": 4,
+        "name": "Product 4",
+        "images": [
+         
+        ],
+        "oldPrice": 655,
+        "newPrice": 379.99,
+        "discount": 20,
+        "ratingsCount": 6,
+        "ratingsValue": 500,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue eleifend nulla vel rutrum. Donec tempus metus non erat vehicula, vel hendrerit sem interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+        "availibilityCount": 2,
+        "cartCount": 1,
+        "categoryId": 2
+      }
+    ],
+    "totalPrice": 554.99,
+    "totalCartCount": 2
+  }
+}

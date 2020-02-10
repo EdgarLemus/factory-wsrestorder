@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: wsrestorden-deployment
+  namespace: dev
+  labels:
+    app: wsrestorden
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wsrestorden
+  template:
+    metadata:
+      labels:
+        app: wsrestorden
+    spec:
+      containers:
+        - name: wsrestorden
+          image: 638238666448.dkr.ecr.us-east-1.amazonaws.com/ws-rest-orden:latest
+          resources:
+            limits:
+              memory: "500Mi"
+              cpu: "200m"
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 18080
+          envFrom:
+          - configMapRef:
+              name: wsrestorden-configmap

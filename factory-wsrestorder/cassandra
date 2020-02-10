@@ -1,0 +1,22 @@
+create keyspace sophospoc with replication={'class':'SimpleStrategy', 'replication_factor':1};
+
+CREATE TYPE sophospoc.country (name text, code text);
+CREATE TYPE sophospoc.billing (firstName text, lastName text,middleName text,company text,email text,phone text,country frozen<country>,city text,state text, zip text, address text);
+
+CREATE TYPE sophospoc.deliveryMethod(value text, name text, description text);
+CREATE TYPE sophospoc.delivery (deliveryMethod frozen<deliveryMethod>);
+
+CREATE TYPE sophospoc.comments (comment text, user text, creationDate text, rating BIGINT);
+
+CREATE TYPE sophospoc.images(small text, medium text, big text);
+
+CREATE TYPE sophospoc.products(id BIGINT, name text, oldPrice BIGINT, newPrice BIGINT, discount BIGINT, ratingsCount BIGINT, description text, availibilityCount BIGINT, color list<text>, size list<text>, weight BIGINT, categoryId BIGINT, cartCount BIGINT, additionalInformation text, comments list<FROZEN<comments>>, detailDescription text, images list<FROZEN<images>>, ratingsvalue BIGINT);
+
+CREATE TYPE sophospoc.cart(compareList BIGINT, wishList BIGINT, totalPrice BIGINT, totalCartCount BIGINT, products list<FROZEN<products>>);
+
+CREATE TABLE sophospoc.orders (id text PRIMARY KEY, IdSession text, createDate timestamp, billing frozen<billing>, delivery frozen<delivery>, payment map<text, text>, cart frozen<cart>, status text, approvalCode text);
+
+CREATE TABLE sophospoc.encript (id text PRIMARY KEY, rqUID text, channel text, ipAddr text, idSession text, data text, createDate timestamp);
+
+
+
